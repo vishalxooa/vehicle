@@ -64,7 +64,7 @@ cd ..
 git add config/default.json
 git commit -m "Added chaincode App ID and API token"
 ```
-8. Login to your github account and create a new repo called `composer-vehicle-manufacture`. Copy the link for repo. Now go back to the terminal and add the link in place of `GITHUB_REPO_LINK` below and run the command
+8. Login to your github account and create a new repo called `composer-vehicle-manufacture`. Copy the link for repo. Now go back to the terminal and add the link in place of `<YOUR_GITHUB_REPO_LINK_HERE>` below and run the command
 ```
 git remote set-url origin <YOUR_GITHUB_REPO_LINK_HERE>
 git push -u origin master
