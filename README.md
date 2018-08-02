@@ -6,7 +6,7 @@ Xooa samples are repos already available in Github under Xooa org. Deploying thi
 3. From the main dashboard, click on **Deploy New** on top left corner to start the deployment process.
 3. The first step is to connect your new Xooa login to your Github account. In the main dashboard you should see the **Connect to Git** option. Click it and in the new browser window that opens up, allow Xooa to access your github account.
 4. Enter **App Name** and **Description** for the app. These fields are for you to identify a particular app from list so make sure your values are relevant to the app you are deploying. Click **Next**.
-5. Select the type of Github account you hold. Since we are working with Xooa organization's samples, select **public** and search for `xooa/vehicle-manufacture`. A list of repos matching the search criteria are shown below. In our case, vehicle-manufacture wil show up. Click **Select** and click **Next**.
+5. Select the type of Github account you hold. Since we are working with Xooa organization's samples, select **public** and search for `xooa/Composer-vehicle-manufacture`. A list of repos matching the search criteria are shown below. In our case, Composer-vehicle-manufacture wil show up. Click **Select** and click **Next**.
 6. The next step is deployment details. Select **master** as the branch and **vehicle-manufacturing** as the chaincode from the dropdowns available. Click **Deploy**.
 7. Sit back and relax while Xooa sets up the backend. Once Xooa is finished with the process you will see **Success** for all the process listed on screen.
 8. You will be redirected to app dashboard once the deployment is complete.
@@ -36,22 +36,22 @@ git clone https://github.com/Xooa/vehicle-manufacture.git
 ```
 cd vehicle-manufacture/config/
 ```
-4. Open the config file `default.json` with your favourite text editor and modify the `webSocketURL` and `httpURL` by replacing `APP_ID` with the app ID we copied above
+4. Open the config file `default.json` with your favourite text editor and modify the `webSocketURL` and `httpURL` by replacing `<YOUR_APP_ID_HERE>` with the app ID we copied above
 ```
 {
   "restServer": {
-      "webSocketURL": "wss://api.xooa.com/api/APP_ID",
-      "httpURL": "https://api.xooa.com/api/APP_ID"
+      "webSocketURL": "wss://api.xooa.com/api/<YOUR_APP_ID_HERE>",
+      "httpURL": "https://api.xooa.com/api/<YOUR_APP_ID_HERE>"
   }
 }
 ```
-5. Add another key-pair called `authToken`. Here replace `YOUR_API_TOKEN` with the API token we copied above. Your `default.json` file should now look as below
+5. Add another key-pair called `authToken` in the same file. Here replace `<YOUR_API_TOKEN_HERE>` with the API token we copied above. Your `default.json` file should now look as below
 ```
 {
   "restServer": {
-      "webSocketURL": "wss://api.xooa.com/api/APP_ID",
-      "httpURL": "https://api.xooa.com/api/APP_ID",
-      "authToken": "bearer YOUR_API_TOKEN"  
+      "webSocketURL": "wss://api.xooa.com/api/<YOUR_APP_ID_HERE>",
+      "httpURL": "https://api.xooa.com/api/<YOUR_APP_ID_HERE>",
+      "authToken": "bearer <YOUR_API_TOKEN_HERE>"  
   }
 }
 ```
@@ -64,9 +64,9 @@ cd ..
 git add config/default.json
 git commit -m "Added chaincode App ID and API token"
 ```
-8. Login to your github account and create a new repo called `vehicle-manufacture`. Copy the link for repo. Now go back to the terminal and add the link in place of `GITHUB_REPO_LINK` below and run the command
+8. Login to your github account and create a new repo called `composer-vehicle-manufacture`. Copy the link for repo. Now go back to the terminal and add the link in place of `GITHUB_REPO_LINK` below and run the command
 ```
-git remote set-url origin GITHUB_REPO_LINK
+git remote set-url origin <YOUR_GITHUB_REPO_LINK_HERE>
 git push -u origin master
 ```
 
